@@ -127,6 +127,10 @@ canvas {
 }
 
 /* Footer styling */
+footer {
+    color:antiquewhite;
+}
+
 ul {
     text-align: center;
     padding: 10px;
