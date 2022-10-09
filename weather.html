@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation Weather App</title>
+    <script src="geolocation.js"></script>
+    <script src="weather.js"></script>
+    <link href="weather.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1 id="welcome">Welcome</h1>
+        <h2 id="city">Click below to start</h2>
+    </header>
+    <div class="geolocation"><!-- user clicks button to get location and then all weather info -->
+        <input id="location" type="button" onclick=callGeolocation() value="Get Location and Weather">
+        <p id="latLong"></p>
+    </div>
+    <div class="container">
+        <div class="days"><!-- days --> 
+            <div class="day"><h3 id="day0">Day 1: </h3></div>
+            <div class="day"><h3 id="day1">Day 2: </h3></div>
+            <div class="day"><h3 id="day2">Day 3: </h3></div>
+            <div class="day"><h3 id="day3">Day 4: </h3></div>
+            <div class="day"><h3 id="day4">Day 5: </h3></div>
+        </div>
+        <div class="hours"><!-- hours -->
+            <h4 id="time0" class="hour">3am</h4>
+            <h4 id="time1" class="hour">6am</h4>
+            <h4 id="time2" class="hour">9am</h4>
+            <h4 id="time3" class="hour">Midday</h4>
+            <h4 id="time4" class="hour">3pm</h4>
+            <h4 id="time5" class="hour">6pm</h4>
+            <h4 id="time6" class="hour">9pm</h4>
+            <h4 id="time7" class="hour">Midnight</h4>
+        </div>
+        <div class="weather"><!-- each weather box to be filled with weather data -->
+            <div class="wbox">
+                <p id="temp0"></p>
+                <p id="icon0"></p>
+                <p id="description0"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp1"></p>
+                <p id="icon1"></p>
+                <p id="description1"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp2"></p>
+                <p id="icon2"></p>
+                <p id="description2"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp3"></p>
+                <p id="icon3"></p>
+                <p id="description3"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp4"></p>
+                <p id="icon4"></p>
+                <p id="description4"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp5"></p>
+                <p id="icon5"></p>
+                <p id="description5"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp6"></p>
+                <p id="icon6"></p>
+                <p id="description6"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp7"></p>
+                <p id="icon7"></p>
+                <p id="description7"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp8"></p>
+                <p id="icon8"></p>
+                <p id="description8"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp9"></p>
+                <p id="icon9"></p>
+                <p id="description9"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp10"></p>
+                <p id="icon10"></p>
+                <p id="description10"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp11"></p>
+                <p id="icon11"></p>
+                <p id="description11"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp12"></p>
+                <p id="icon12"></p>
+                <p id="description12"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp13"></p>
+                <p id="icon13"></p>
+                <p id="description13"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp14"></p>
+                <p id="icon14"></p>
+                <p id="description14"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp15"></p>
+                <p id="icon15"></p>
+                <p id="description15"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp16"></p>
+                <p id="icon16"></p>
+                <p id="description16"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp17"></p>
+                <p id="icon17"></p>
+                <p id="description17"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp18"></p>
+                <p id="icon18"></p>
+                <p id="description18"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp19"></p>
+                <p id="icon19"></p>
+                <p id="description19"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp20"></p>
+                <p id="icon20"></p>
+                <p id="description20"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp21"></p>
+                <p id="icon21"></p>
+                <p id="description21"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp22"></p>
+                <p id="icon22"></p>
+                <p id="description22"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp23"></p>
+                <p id="icon23"></p>
+                <p id="description23"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp24"></p>
+                <p id="icon24"></p>
+                <p id="description24"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp25"></p>
+                <p id="icon25"></p>
+                <p id="description25"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp26"></p>
+                <p id="icon26"></p>
+                <p id="description26"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp27"></p>
+                <p id="icon27"></p>
+                <p id="description27"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp28"></p>
+                <p id="icon28"></p>
+                <p id="description28"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp29"></p>
+                <p id="icon29"></p>
+                <p id="description29"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp30"></p>
+                <p id="icon30"></p>
+                <p id="description30"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp31"></p>
+                <p id="icon31"></p>
+                <p id="description31"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp32"></p>
+                <p id="icon32"></p>
+                <p id="description32"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp33"></p>
+                <p id="icon33"></p>
+                <p id="description33"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp34"></p>
+                <p id="icon34"></p>
+                <p id="description34"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp35"></p>
+                <p id="icon35"></p>
+                <p id="description35"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp36"></p>
+                <p id="icon36"></p>
+                <p id="description36"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp37"></p>
+                <p id="icon37"></p>
+                <p id="description37"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp38"></p>
+                <p id="icon38"></p>
+                <p id="description38"></p>
+            </div>
+            <div class="wbox">
+                <p id="temp39"></p>
+                <p id="icon39"></p>
+                <p id="description39"></p>
+            </div>
+        </div>
+    </div>
+    <div class="graph"><!-- for the line graph -->
+        <h2>Weather Graph</h2>
+        <canvas id="graphCanvas" height="400" width="750"></canvas>
+    </div>
+    <footer>
+        <p>Weather data from OpenWeatherMap's <a href="https://openweathermap.org/forecast5">five day weather forecast api</a></p>
+        <p>Weather Icons from OpenWeatherMap's <a href="https://openweathermap.org/weather-conditions">weather icons</a></p>
+        <ul>
+            <li>Valid <a href="">HTML5</a>.</li>
+            <li>Valid <a href="">CSS3</a>.</li> 
+        </ul>
+    </footer>
+</body>
+
+</html>
