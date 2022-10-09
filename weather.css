@@ -1,6 +1,6 @@
 ﻿/* General page styling*/
 body {
-    background-color: darkslategrey;
+    background-color: darkseagreen;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -72,11 +72,11 @@ button {
 .day {
     background-color: antiquewhite;
     color: darkslategray;
-    opacity: 0.6;
+    opacity: 0.7;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 0.99;
+    border-radius: 2%;
 }
 
 .hours {
@@ -92,8 +92,9 @@ button {
 .hour {
     background-color: antiquewhite;
     color: darkslategray;
+    opacity: 0.7;
     padding: .5em;
-    border-radius: 0.99;
+    border-radius: 2%;
 }
 
 .weather {
@@ -112,7 +113,8 @@ button {
     color: darkslategray;
     padding: 1px;
     margin: 1px;
-    border-radius: 0.99;
+    border-radius: 2%;
+    
 }
 
 /* Canvas graph styling */
