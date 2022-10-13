@@ -1,7 +1,7 @@
 ﻿
 function requestWeatherData(latLong) {
     var latLong = latLong;
-    var apiKey = "&appid=449c530ef0ac7a299ce6e9ca3d0da15c&units=metric";
+    var apiKey = "&appid=2b1e45371ae5009312bda6f42e002cff&units=metric";
     console.log(latLong); // for troubleshooting
 
     if (parseFloat(latLong) == NaN) {
